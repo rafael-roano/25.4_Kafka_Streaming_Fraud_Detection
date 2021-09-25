@@ -1,0 +1,26 @@
+version: "3.7"
+
+services:
+
+  generator:
+    image: rr/generator:latest
+      
+    environment:
+      KAFKA_BROKER_URL: broker:9092
+      TRANSACTIONS_TOPIC: queueing.transactions
+      TRANSACTIONS_PER_SECOND: 1000
+
+
+  detector:
+    image: rr/detector:latest
+
+    environment:
+      KAFKA_BROKER_URL: broker:9092
+      TRANSACTIONS_TOPIC: queueing.transactions
+      LEGIT_TOPIC: streaming.transactions.legit
+      FRAUD_TOPIC: streaming.transactions.fraud
+
+networks:
+  default:
+    external:
+      name: kafka-network
