@@ -52,6 +52,16 @@ Inside 25.4_Kafka_Streaming_Fraud_Detection/ run:
     $ docker-compose up
 
 
+## System running
+
+![alt text](screenshots/kafka_cluster_running.png "Kafka cluster running via Docker")
+
+![alt text](screenshots/generator_and_detector_apps_running.png "generator and detector apps running via Docker")
+
+![alt text](screenshots/streaming.transactions.legit_topic.png "Streaming.transactions.legit topic")
+
+![alt text](screenshots/streaming.transactions.fraud_topic.png "Streaming.transactions.fraud topic")
+
 ## Authors
 
 Rafael Roano
